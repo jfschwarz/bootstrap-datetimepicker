@@ -1050,7 +1050,7 @@
                     parseFormats.push(actualFormat);
                 }
 
-                use24Hours = (actualFormat.toLowerCase().indexOf('a') < 1 && actualFormat.indexOf('h') < 1);
+                use24Hours = actualFormat.search(/(h|a|A)(?![^\[]*\])/) < 0;
 
                 if (isEnabled('y')) {
                     minViewModeNumber = 2;
