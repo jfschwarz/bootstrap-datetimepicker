@@ -1865,54 +1865,61 @@
         inline: false,
         keyBinds: {
             up: function (widget) {
+                var date = this.date() ? this.date().clone() : new moment();
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(this.date().clone().subtract(7, 'd'));
+                    this.date(date.subtract(7, 'd'));
                 } else {
-                    this.date(this.date().clone().add(1, 'm'));
+                    this.date(date.add(1, 'm'));
                 }
             },
             down: function (widget) {
+                var date = this.date() ? this.date().clone() : new moment();
                 if (!widget) {
                     this.show();
-                }
-                else if (widget.find('.datepicker').is(':visible')) {
-                    this.date(this.date().clone().add(7, 'd'));
+                } else if (widget.find('.datepicker').is(':visible')) {
+                    this.date(date.add(7, 'd'));
                 } else {
-                    this.date(this.date().clone().subtract(1, 'm'));
+                    this.date(date.subtract(1, 'm'));
                 }
             },
             'control up': function (widget) {
+                var date = this.date() ? this.date().clone() : new moment();
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(this.date().clone().subtract(1, 'y'));
+                    this.date(date.subtract(1, 'y'));
                 } else {
-                    this.date(this.date().clone().add(1, 'h'));
+                    this.date(date.add(1, 'h'));
                 }
             },
             'control down': function (widget) {
+                var date = this.date() ? this.date().clone() : new moment();
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(this.date().clone().add(1, 'y'));
+                    this.date(date.add(1, 'y'));
                 } else {
-                    this.date(this.date().clone().subtract(1, 'h'));
+                    this.date(date.subtract(1, 'h'));
                 }
             },
             left: function (widget) {
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(this.date().clone().subtract(1, 'd'));
+                    var date = this.date() ? this.date().clone() : new moment();
+                    this.date(date.subtract(1, 'd'));
                 }
             },
             right: function (widget) {
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(this.date().clone().add(1, 'd'));
+                    var date = this.date() ? this.date().clone() : new moment();
+                    this.date(date.add(1, 'd'));
                 }
             },
             pageUp: function (widget) {
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(this.date().clone().subtract(1, 'M'));
+                    var date = this.date() ? this.date().clone() : new moment();
+                    this.date(date.subtract(1, 'M'));
                 }
             },
             pageDown: function (widget) {
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(this.date().clone().add(1, 'M'));
+                    var date = this.date() ? this.date().clone() : new moment();
+                    this.date(date.add(1, 'M'));
                 }
             },
             enter: function () {
