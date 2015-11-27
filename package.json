@@ -17,10 +17,10 @@
     "timepicker",
     "moment"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "moment": "^2.8.2",
     "bootstrap": "^3.0",
-    "jquery": "latest"
+    "jquery": "^2.0.3"
   },
   "devDependencies": {
     "grunt": "latest",
